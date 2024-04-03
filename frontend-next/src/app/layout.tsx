@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import NextTopLoader from "nextjs-toploader"
+import Header from "./components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,8 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={inter.className}>
+        <NextTopLoader color="#00ff00" />
         <main
-          className="container mx-auto max-w-3xl">
+          className="container mx-auto max-w-3xl mt-4 space-y-4">
+          <Header />
           {children}
         </main>
       </body>
